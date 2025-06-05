@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  min-width: 375px;
+  font-family: Rubik, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #5f86f2;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  width: 1440px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-section {
+  background-image: url(../images/pattern-bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 29px 16px 128px;
+  text-align: center;
+
+  h1 {
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+
+  form {
+    font-size: 0;
+  }
+
+  input {
+    width: 500px;
+    height: 58px;
+    border: none;
+    padding: 20px 24px;
+    font-size: 18px;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    border: 2px solid #fff;
+    border-right: none;
+    transition-property: border-color;
+    transition-duration: 0.2s;
+  }
+
+  input:focus {
+    border-color: #000;
+  }
+
+  button {
+    width: 58px;
+    height: 58px;
+    border: none;
+    padding: 0;
+    background-color: #000000;
+    border-radius: 0 15px 15px 0;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: #3f3f3f;
+  }
+}
+
+.info-section {
+  position: relative;
+}
+
+.info-container {
+  position: absolute;
+  width: 1110px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 37px 0;
+  z-index: 999;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  li {
+    padding: 0 32px;
+  }
+
+  li:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  h2 {
+    color: #2c2c2c;
+    opacity: 0.4987;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.75px;
+    margin: 0 0 13px;
+  }
+
+  p {
+    color: #2c2c2c;
+    font-size: 26px;
+    line-height: 1.15385;
+    font-weight: 500;
+    min-width: 160px;
+    margin: 0;
+  }
+}
+
+.map {
+  background-color: #241f1f;
+  height: 640px;
+}
+
+@media all and (max-width: 920px) {
+  .form-section {
+    background-image: url(../images/pattern-bg-mobile.png);
+
+    h1 {
+      font-size: 26px;
+    }
+
+    input {
+      width: 270px;
+    }
+  }
+
+  .info-container {
+    width: 328px;
+    max-width: calc(100% - 32px);
+    padding: 12px 24px;
+
+    top: 50%;
+    transform: translate(-50%, -36%);
+
+    ul {
+      display: block;
+    }
+
+    li {
+      padding: 12px 0;
+      text-align: center;
+    }
+
+    li:not(:last-child) {
+      border-right: none;
+    }
+
+    h2 {
+      font-size: 10px;
+      margin-bottom: 7px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
